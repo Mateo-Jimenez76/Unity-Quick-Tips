@@ -9,6 +9,12 @@ The input system that Unity uses by default as of Unity Version 6000.3
 
 The only Input system is soon becoming deprecated due to this move.
 
+
+
+
+
+
+
 ### Using OnMouse Functions
 The OnMouse functions that derive from Monobehaviour are part of the old input system and thus require it being reenabled in settings. Unity is working on bringing these functions back in the New Input System.
 
@@ -41,11 +47,22 @@ Although its not recommended to use `Camera.main` because its slow, it's include
 
 # Performance
 
+## Sprite Compression
+### Alpha Is Transparency
+This option can greatly decrease the size of your 2D textures if the alpha channel trasparent(as is the case in most scenarious)
+
+
+
+
 ### Be careful with GameObject.SetActive()
 This function, although not in it of itself expensive to call, can cause lag spikes as the Awake and OnEnable functions for all components on the object and in the children will be called. \
 An example of this is when enabling a gameobject that has a TextMeshProUGUI component. Enabling this is expensive because it has to calculate how the text will be formatted and displayed. (Although you might not notice on your gaming pc, I noticed it very clearly on my laptop...)
 
 # Iteration Speed
+
+
+
+
 
 ## Engine Optimizations
 
