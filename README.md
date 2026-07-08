@@ -38,19 +38,6 @@ If you want to access input directly from a device and circumvent the Input Syst
 `Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());`
 Although its not recommended to use `Camera.main` because its slow, it's included so that it can work out of the box.
 
-
-# Performance
-
-### Alpha Is Transparency
-This option can greatly decrease the size of your 2D textures if the alpha channel trasparent(as is the case in most scenarious)
-
-
-### Be careful with GameObject.SetActive()
-This function, although not in it of itself expensive to call, can cause lag spikes as the Awake and OnEnable functions for all components on the object and in the children will be called. \
-An example of this is when enabling a gameobject that has a TextMeshProUGUI component. Enabling this is expensive because it has to calculate how the text will be formatted and displayed.
-
-## Engine Optimizations
-
 ### Assembly Definitions
 
 <b>Overview</b>
